@@ -1,4 +1,5 @@
-class RangerController < ApplicationController
+class RangersController < ApplicationController
+
   def new
     @parks = Park.all
   end

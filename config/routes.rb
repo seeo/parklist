@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   patch '/parks/:id' => 'parks#update'
   delete '/parks/:id' => 'parks#destroy'
 
-
   get '/rangers' => 'rangers#index', as: 'rangers'
   get '/rangers/new' => 'rangers#new', as: 'new_ranger'
   post '/rangers' => 'rangers#create'

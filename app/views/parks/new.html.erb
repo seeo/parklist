@@ -1,4 +1,9 @@
 <%= form_with scope: :park, url: parks_path, local: true do |form| %>
+	<% if params.has_key?(:park_id)%>
+		<input value = "<%=params[:park_id]%>" />
+	<% else%>
+		<%= form.collection_select :park_id, @parks, :id, :name%>
+	<%end%>
 
   <p>
     <%= form.label :name %><br>

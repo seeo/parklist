@@ -4,6 +4,6 @@ class Rangers < ActiveRecord::Migration[5.2]
       t.string :name
       t.references :park
       t.timestamps
-end
+    end
   end
 end

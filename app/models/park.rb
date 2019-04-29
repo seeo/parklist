@@ -1,2 +1,2 @@
-class Park < ApplicationRecord
+class Park < ActiveRecord::Base
 end

@@ -18,8 +18,13 @@ Rails.application.routes.draw do
   patch '/rangers/:id' => 'rangers#update'
   delete '/rangers/:id' => 'rangers#destroy'
 
-
+  #get all rangers in this park
+  # example: parks/1/rangers
   get '/parks/:park_id/rangers' => 'rangers#index', as: 'park_rangers'
+
+  #render a form for new ranger that will be associated with this park
   get '/parks/:park_id/rangers/new' => 'rangers#create', as: 'new_park_ranger'
+
+  #
   post '/parks/:park_id/rangers' => 'rangers#create'
 end

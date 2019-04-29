@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'parks#index'
+  root 'rangers#index'
   get '/parks' => 'parks#index', as: 'parks'
   get '/parks/new' => 'parks#new', as: 'new_park'
   post '/parks' => 'parks#create'

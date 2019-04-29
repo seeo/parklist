@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/parks/:park_id/rangers' => 'rangers#index', as: 'park_rangers'
 
   #render a form for new ranger that will be associated with this park
-  get '/parks/:park_id/rangers/new' => 'rangers#create', as: 'new_park_ranger'
+  get '/parks/:park_id/rangers/new' => 'rangers#new', as: 'new_park_ranger'
 
   #
   post '/parks/:park_id/rangers' => 'rangers#create'

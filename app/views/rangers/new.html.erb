@@ -1,6 +1,13 @@
 <%= form_with scope: :ranger, url: rangers_path, local: true do |form| %>
 
-  <%= form.collection_select :park_id, @parks, :id, :name %>
+	<% if params.has_key?(:park_id) %>
+		<!-- if the url is nested -->
+    <%= form.hidden_field :park_id, value: params[:park_id] %>
+	<% else %>
+		<!-- otherwise let the user choose the park -->
+	  <%= form.collection_select :park_id, @parks, :id, :name %>
+	<% end %>
+
 
   <p>
     <%= form.label :name %><br>

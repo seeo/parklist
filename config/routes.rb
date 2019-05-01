@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   patch '/rangers/:id' => 'rangers#update'
   delete '/rangers/:id' => 'rangers#destroy'
 
-  #get all rangers in this park
+  # get all rangers in this park
   # example: parks/1/rangers
   get '/parks/:park_id/rangers' => 'rangers#index', as: 'park_rangers'
+  get '/parks/:park_id/rangers/:id' => 'rangers#show', as: 'park_ranger'
 
-  #render a form for new ranger that will be associated with this park
+  # render a form for new ranger that will be associated with this park
   get '/parks/:park_id/rangers/new' => 'rangers#new', as: 'new_park_ranger'
 
   #

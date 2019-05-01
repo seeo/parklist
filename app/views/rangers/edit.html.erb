@@ -1,0 +1,21 @@
+<h1>Edit Ranger</h1>
+
+<%= form_with scope: :ranger, model: @ranger, local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :"Park ID" %><br>
+    <%= form.text_area :park_id %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', root_path %>

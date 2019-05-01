@@ -32,6 +32,16 @@ class RangersController < ApplicationController
     end
   end
 
+  def edit
+    @ranger = Ranger.find(params[:id])
+  end
+
+  def update
+    @ranger = Ranger.find(params[:id])
+    @ranger.update(ranger_params)
+    redirect_to @ranger
+  end
+
   private
 
     def ranger_params

@@ -7,6 +7,9 @@
   <strong>Description:</strong>
   <%= @park.description %>
 </p>
+
+<%= link_to 'Back', new_park_url %>
+
 <%#
 <p>
   <strong>Rangers in charge of this park:</strong>
@@ -15,11 +18,11 @@
  <% @ranger.each do |ranger| %>
     <%# <tr>
       <td><%= ranger.name.capitalize %>
-			<%# </td> %> %>
+			<%# </td> %>
       <%# <td><%= link_to 'Show', edit_article_path(article)%>
     <%# </tr>
   <% end %>
-<%# </p> %> %> %>
+<%# </p> %>
 
 <%# <%= link_to 'Back', root_path %>
 <%# <%= link_to 'Edit', edit_article_path(@article) %>

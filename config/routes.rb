@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   # render a form for new ranger that will be associated with this park
   get '/parks/:park_id/rangers/new' => 'rangers#new', as: 'new_park_ranger'
+  get '/parks/:park_id/rangers/:id/edit' => 'rangers#edit', as: 'edit_park_ranger'
 
   #
   post '/parks/:park_id/rangers' => 'rangers#create'

@@ -6,8 +6,15 @@ class ParksController < ApplicationController
     def create
     @park = Park.new(park_params)
 
-    @park.save
-    redirect_to @park
+      if @park.save
+        render plain: "hello, saved"
+        #redirect '/'
+      else
+      @park.errors.messages[:name]
+        render plain: @park.errors.inspect
+        # @parks = Park.all
+        render 'new'
+      end
     end
 
     def show

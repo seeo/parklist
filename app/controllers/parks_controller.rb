@@ -13,7 +13,7 @@ class ParksController < ApplicationController
       @park.errors.messages[:name]
         render plain: @park.errors.inspect
         # @parks = Park.all
-        render 'new'
+        # render 'new'
       end
     end
 
